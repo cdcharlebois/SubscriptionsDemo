@@ -109,11 +109,12 @@ define([
                     callback: lang.hitch(this, function(validations) {
                         console.log("Validation subscription fired");
                         console.debug(arguments);
-                        // an array of arrays of validation objects
-                        // arguments[0][0] is the feedback
-                        // arguments[0][0].getAttributes() --> the list of attributes with errors
-                        // arguments[0][0].getReasonByAttribute({attrName}) --> the message for field `attrName`
-                        var val = arguments[0][0];
+                        // an array of validation objects, per object
+                        // validations[0] is the feedback
+                        // validations[0].getGuid() --> the obect guid
+                        // validations[0].getAttributes() --> the list of attributes with errors
+                        // validations[0].getReasonByAttribute({attrName}) --> the message for field `attrName`
+                        var val = validations[0];
                         val.getAttributes().forEach(function(a) { console.log(val.getReasonByAttribute(a.name)); });
                         this._updateRendering();
                     })
