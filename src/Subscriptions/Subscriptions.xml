@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="Subscriptions.widget.Subscriptions" needsEntityContext="true" 
+    xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Subscriptions</name>
+    <description>The description of this widget.</description>
+    <icon />
+    <properties>
+        <!-- subAttr: null,
+        subEntity: null,
+        subObject: null,
+        subVal: null,
+        attribute: null,
+        entity: null, -->
+        <property key="attribute" type="attribute" required="false" isPath="optional" pathType="reference">
+            <caption>Attribute</caption>
+            <category>General</category>
+            <description>The attribute to subscribe to</description>
+            <attributeTypes>
+                <attributeType name="AutoNumber"/>
+                <attributeType name="Binary"/>
+                <attributeType name="Boolean"/>
+                <attributeType name="DateTime"/>
+                <attributeType name="Decimal"/>
+                <attributeType name="Enum"/>
+                <attributeType name="HashString"/>
+                <attributeType name="Integer"/>
+                <attributeType name="Long"/>
+                <attributeType name="String"/>
+            </attributeTypes>
+        </property>
+        <property key="subAttr" type="boolean" required="true" defaultValue="false">
+            <caption>Attr?</caption>
+            <category>General</category>
+            <description>Subscribe to Attribute?</description>
+        </property>
+        <property key="subEntity" type="boolean" required="true" defaultValue="false">
+            <caption>Entity?</caption>
+            <category>General</category>
+            <description>Subscribe to Entity?</description>
+        </property>
+        <property key="subObject" type="boolean" required="true" defaultValue="false">
+            <caption>Object?</caption>
+            <category>General</category>
+            <description>Subscribe to Object?</description>
+        </property>
+        <property key="subVal" type="boolean" required="true" defaultValue="false">
+            <caption>Validation?</caption>
+            <category>General</category>
+            <description>Subscribe to Validation?</description>
+        </property>
+    </properties>
+</widget>
